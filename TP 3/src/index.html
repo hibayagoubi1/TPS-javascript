@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book Reading Tracker</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+  <!-- Container for content -->
+  <div class="max-w-4xl mx-auto p-6">
+    <!-- Title -->
+    <h1 class="text-3xl font-bold text-center mb-6">📚 Book Reading Tracker</h1>
+
+    <!-- Book Form -->
+    <form id="book-form" class="bg-white p-6 rounded-lg shadow-md space-y-4 mb-8">
+      <h2 class="text-xl font-semibold mb-4">Add a New Book</h2>
+
+      <!-- Title Input -->
+      <div>
+        <label for="title" class="block text-sm font-medium text-gray-700">Title</label>
+        <input type="text" name="title" id="title" placeholder="Enter the book title" class="mt-1 p-2 block w-full border border-gray-300 rounded-md" required />
+      </div>
+
+      <!-- Author Input -->
+      <div>
+        <label for="author" class="block text-sm font-medium text-gray-700">Author</label>
+        <input type="text" name="author" id="author" placeholder="Enter the author's name" class="mt-1 p-2 block w-full border border-gray-300 rounded-md" required />
+      </div>
+
+      <!-- Number of Pages Input -->
+      <div>
+        <label for="pages" class="block text-sm font-medium text-gray-700">Number of Pages</label>
+        <input type="number" name="pages" id="pages" placeholder="Enter total pages" class="mt-1 p-2 block w-full border border-gray-300 rounded-md" required />
+      </div>
+
+      <!-- Status Input -->
+      <div>
+        <label for="status" class="block text-sm font-medium text-gray-700">Status</label>
+        <select name="status" id="status" class="mt-1 p-2 block w-full border border-gray-300 rounded-md" required>
+          <option value="Read">Read</option>
+          <option value="Re-read">Re-read</option>
+          <option value="DNF">DNF</option>
+          <option value="Currently reading">Currently reading</option>
+          <option value="Returned Unread">Returned Unread</option>
+          <option value="Want to read">Want to read</option>
+        </select>
+      </div>
+
+      <!-- Price Input -->
+      <div>
+        <label for="price" class="block text-sm font-medium text-gray-700">Price ($)</label>
+        <input type="number" name="price" id="price" placeholder="Enter price in dollars" class="mt-1 p-2 block w-full border border-gray-300 rounded-md" required />
+      </div>
+
+      <!-- Pages Read Input -->
+      <div>
+        <label for="pagesRead" class="block text-sm font-medium text-gray-700">Pages Read</label>
+        <input type="number" name="pagesRead" id="pagesRead" placeholder="Enter pages read so far" class="mt-1 p-2 block w-full border border-gray-300 rounded-md" required />
+      </div>
+
+      <!-- Format Input -->
+      <div>
+        <label for="format" class="block text-sm font-medium text-gray-700">Format</label>
+        <select name="format" id="format" class="mt-1 p-2 block w-full border border-gray-300 rounded-md" required>
+          <option value="Print">Print</option>
+          <option value="PDF">PDF</option>
+          <option value="Ebook">Ebook</option>
+          <option value="AudioBook">AudioBook</option>
+        </select>
+      </div>
+
+      <!-- Suggested By Input -->
+      <div>
+        <label for="suggestedBy" class="block text-sm font-medium text-gray-700">Suggested By</label>
+        <input type="text" name="suggestedBy" id="suggestedBy" placeholder="Enter the name of the person who suggested" class="mt-1 p-2 block w-full border border-gray-300 rounded-md" />
+      </div>
+
+      <!-- Submit Button -->
+      <div class="text-center">
+        <button type="submit" class="px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600">Add Book</button>
+      </div>
+    </form>
+
+    <!-- Book List Display -->
+    <div id="book-list" class="space-y-4">
+      <h2 class="text-xl font-semibold mb-4">Book List</h2>
+      <!-- Books will be displayed here by script -->
+    </div>
+  </div>
+
+  <!-- TypeScript script for functionality -->
+  <script src="./script.js"></script> <!-- Compiled from script.ts -->
+</body>
+</html>
